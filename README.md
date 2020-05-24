@@ -23,8 +23,11 @@ The dataset used for this project is available at [Kaggle](https://www.kaggle.co
 
 
 ### Software Requirements
+
+A Typescript based NodeJS server is created with the following utilties:
+
 - Used [Papaparse](https://www.papaparse.com/) to parse CSV files
-- Used [AMCharts 4](https://www.amcharts.com/docs/v4/) to render line (XY) chart
+- Used [AMCharts 4](https://www.amcharts.com/docs/v4/) to render line (XY)  chart
 - Used [lodash](https://lodash.com) utility for data aggregation and data manipulation . Functions used [groupBy](https://lodash.com/docs/4.17.15#groupBy) (filter and aggregate data per station), [pick](https://lodash.com/docs/4.17.15#pick), map, filter, reduce, etc
 - Used [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to make page mobile responsive
 - Use [jQuery UI datepicker](https://jqueryui.com/datepicker/) along with client side validations
