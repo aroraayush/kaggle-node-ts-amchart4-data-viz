@@ -1,5 +1,4 @@
-Orignal [Bitbucket Repo](https://bitbucket.org/ayush-usf/kaggle-pollution-data-papaparse-amchart/src/master/) with Commit History
-
+Orignal [Bitbucket Repo](https://bitbucket.org/ayush-usf/kaggle-pollution-data-papaparse-amchart/src/master/) with [Commit History](https://bitbucket.org/ayush-usf/kaggle-pollution-data-papaparse-amchart/commits/)
 ---
 
 ## Air Pollution in Seoul
