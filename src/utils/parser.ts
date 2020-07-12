@@ -13,15 +13,15 @@ class CSVParser {
     parseCSV(filename : string, dynamicTypingOn : boolean, colModel : string[]) {
         const filepath = path.join(this.dirPath, filename);
         const file = createReadStream(filepath);
-        
+
         return new Promise(resolve => {
             const returnData : any = [];
-            Papa.parse(file, { 
-                skipEmptyLines: true, 
-                header: true, 
+            Papa.parse(file, {
+                skipEmptyLines: true,
+                header: true,
                 worker: true,
                 delimiter: "\n",
-                transformHeader:function(h) {
+                transformHeader(h) {
                     return h.trim();
                 },
                 error: (error) => {
@@ -33,7 +33,7 @@ class CSVParser {
                     if(results.data.hasOwnProperty('Measurement date')){
                         results.data["Measurement date"] = results.data["Measurement date"].split(" ")[0]
                     }
-                    // Because we are reading streaming data, we can 
+                    // Because we are reading streaming data, we can
                     // never get result as complete function argument
                     // Similarly, for chunk also prefer array.push
                     returnData.push(results.data);
@@ -41,7 +41,7 @@ class CSVParser {
                 },
                 // For future reference
                 // transform : (colName,val) => { // Edit each cells here }
-                complete: function() {
+                complete() {
                     resolve(returnData);
                 }
             });
